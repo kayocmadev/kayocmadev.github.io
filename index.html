@@ -1,402 +1,773 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kayo Cézar - Desenvolvedor Back-End & Mobile | PHP, Laravel, Flutter, Docker, CI/CD | Cibersegurança">
-    <title>Kayo Cézar | Desenvolvedor Back-End & Mobile</title>
+    <meta name="description" content="Kayo Cézar - Back-End & Mobile Developer | PHP, Laravel, Flutter, Docker, CI/CD | Cybersecurity">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kayo Cézar | Back-End & Mobile Developer">
+    <meta property="og:description" content="Software developer with 2+ years of experience in back-end, mobile, and infrastructure. PHP/Laravel, Flutter, Docker, CI/CD. Transitioning into Cybersecurity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kayocmadev.github.io">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Kayo Cézar | Back-End & Mobile Developer">
+    <meta name="twitter:description" content="Software developer with 2+ years of experience in back-end, mobile, and infrastructure.">
+    <title>Kayo Cézar | Back-End & Mobile Developer</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%233b82f6'/%3E%3Ctext x='50' y='66' font-family='system-ui' font-size='42' font-weight='700' fill='white' text-anchor='middle'%3EKC%3C/text%3E%3C/svg%3E">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kayo Cézar Mendonça de Andrade",
+        "jobTitle": "Back-End & Mobile Developer",
+        "url": "https://kayocmadev.github.io",
+        "email": "kayocezarma@gmail.com",
+        "telephone": "+5583996167221",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "João Pessoa",
+            "addressRegion": "PB",
+            "addressCountry": "BR"
+        },
+        "sameAs": [
+            "https://linkedin.com/in/kayocezarandrade",
+            "https://github.com/kayocmadev"
+        ],
+        "knowsLanguage": ["pt-BR", "en"],
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Cruzeiro do Sul Virtual"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidade Federal da Paraíba"
+            }
+        ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link" data-i18n="skip">Skip to main content</a>
+
     <nav id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">kayo<span>cézar</span></a>
-            <button class="nav-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
             <ul class="nav-links">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contato" class="nav-cta">Contato</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="icon-btn" aria-label="Switch language">
+                    <span class="lang-label">PT</span>
+                </button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                </button>
+                <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <section id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content fade-up">
-            <div class="hero-badge">Disponível para novas oportunidades</div>
-            <h1>Kayo Cézar</h1>
-            <p class="hero-title">Desenvolvedor Back-End & Mobile</p>
-            <p class="hero-stack">
-                <span>PHP</span><span>Laravel</span><span>Flutter</span><span>Docker</span><span>CI/CD</span>
-            </p>
-            <p class="hero-location">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                João Pessoa, PB
-            </p>
-            <div class="hero-links">
-                <a href="mailto:kayocezarma@gmail.com" class="btn btn-primary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    Contato
-                </a>
-                <a href="https://linkedin.com/in/kayocezarandrade" target="_blank" class="btn btn-ghost">LinkedIn</a>
-                <a href="https://github.com/kayocmadev" target="_blank" class="btn btn-ghost">GitHub</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <span>scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
-
-    <section id="sobre">
-        <div class="container">
-            <div class="section-label fade-up">Sobre mim</div>
-            <div class="sobre-grid fade-up">
-                <div class="sobre-text">
-                    <p class="lead">Comecei como estagiário e em menos de dois anos já estava liderando projetos do zero ao deploy em produção.</p>
-                    <p>Fui promovido de Programador II a Programador V em menos de 9 meses, assumindo a responsabilidade técnica de sistemas completos para os setores público e privado.</p>
-                    <p>Minha experiência principal está em back-end, mobile e infraestrutura. Já desenvolvi sistemas multi-tenant atendendo 7+ clientes em produção simultânea, plataformas SaaS e aplicativos mobile com comunicação em tempo real.</p>
-                    <p>Tenho formação em Direito pela UFPB, o que me dá uma visão diferenciada em projetos que envolvem LGPD e segurança jurídica de dados. Atualmente em transição para Cibersegurança, com 5 certificações CISCO e formação em Pentest.</p>
-                </div>
-                <div class="sobre-stats">
-                    <div class="stat">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label">Anos de experiência</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">7+</span>
-                        <span class="stat-label">Clientes em produção</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">5</span>
-                        <span class="stat-label">Certificações CISCO</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">9</span>
-                        <span class="stat-label">Meses até promoção</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projetos">
-        <div class="container">
-            <div class="section-label fade-up">Projetos em destaque</div>
-            <div class="projects-grid">
-                <div class="project-card fade-up">
-                    <div class="project-status">
-                        <span class="status-dot"></span> Em produção
-                    </div>
-                    <h3>Sistema de Votação Eletrônica</h3>
-                    <p>Sistema multi-tenant para câmaras municipais com app mobile. Votações ao vivo com WebSocket, autenticação biométrica, controle de oradores com countdown e gestão de pauta. Atendendo 7+ câmaras simultaneamente.</p>
-                    <div class="project-stack">
-                        <span>Laravel</span><span>Flutter</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>WebSocket</span><span>JWT</span><span>GitLab CI/CD</span>
-                    </div>
-                </div>
-                <div class="project-card fade-up">
-                    <div class="project-status">
-                        <span class="status-dot"></span> Em produção
-                    </div>
-                    <h3>Sistema de Gestão de Saúde Pública</h3>
-                    <p>Plataforma completa com 14 módulos CRUD, 15+ relatórios e integração com APIs governamentais (SEFAZ, Portal da Transparência, Conecta Gov.br, IBGE). Gestão de profissionais, contratos, notas fiscais e licitações.</p>
-                    <div class="project-stack">
-                        <span>Laravel</span><span>Filament</span><span>TailwindCSS</span><span>MySQL</span><span>Spatie Permission</span><span>Alpine.js</span>
-                    </div>
-                </div>
-                <div class="project-card fade-up">
-                    <div class="project-status status-dev">
-                        <span class="status-dot dot-yellow"></span> Em desenvolvimento
-                    </div>
-                    <h3>Plataforma SaaS Multi-Tenant para PDV</h3>
-                    <p>Sistema de ponto de venda com painéis administrativos separados (landlord/tenant), controle de estoque, gestão financeira e múltiplos perfis de acesso.</p>
-                    <div class="project-stack">
-                        <span>Laravel</span><span>Vue.js 3</span><span>Inertia.js</span><span>Filament</span><span>Stancl/Tenancy</span><span>Docker</span><span>Redis</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia">
-        <div class="container">
-            <div class="section-label fade-up">Trajetória profissional</div>
-            <div class="timeline">
-                <div class="timeline-item fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Programador V</h3>
-                                <p class="company">PBSoft (Máxima Tecnologia) · Presencial</p>
-                            </div>
-                            <span class="date">fev – jun 2026</span>
-                        </div>
-                        <p class="timeline-desc">Liderança técnica de sistema de votação eletrônica multi-tenant para câmaras municipais. Arquitetura completa (back-end, mobile, infra), deploy automatizado com CI/CD e configuração de segurança de servidor.</p>
-                        <div class="timeline-promotion">Promovido em menos de 9 meses</div>
-                    </div>
-                </div>
-                <div class="timeline-item fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Programador II</h3>
-                                <p class="company">PBSoft (Máxima Tecnologia) · Presencial</p>
-                            </div>
-                            <span class="date">mai 2025 – jan 2026</span>
-                        </div>
-                        <p class="timeline-desc">Desenvolvimento de sistemas customizados para setores público e privado. APIs RESTful, ambientes Docker padronizados e projetos de compliance com LGPD.</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Desenvolvedor</h3>
-                                <p class="company">Rede Facilité · Remoto</p>
-                            </div>
-                            <span class="date">jul 2024 – ago 2025</span>
-                        </div>
-                        <p class="timeline-desc">Aplicações web com PHP/Laravel, APIs RESTful e containerização com Docker.</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Estágio em Desenvolvimento Web</h3>
-                                <p class="company">Rede Facilité</p>
-                            </div>
-                            <span class="date">mar – jun 2024</span>
-                        </div>
-                        <p class="timeline-desc">Suporte ao desenvolvimento de projetos de software e manutenção de infraestrutura de servidores.</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-up">
-                    <div class="timeline-dot dot-active"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Desenvolvedor Freelance</h3>
-                                <p class="company">Autônomo · Remoto</p>
-                            </div>
-                            <span class="date">jul 2023 – atual</span>
-                        </div>
-                        <p class="timeline-desc">Sistemas de gestão de saúde pública e plataforma SaaS multi-tenant para PDV. Integração com APIs governamentais, RBAC e deploy em produção.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <div class="section-label fade-up">Habilidades técnicas</div>
-            <div class="skills-columns fade-up">
-                <div class="skill-group">
-                    <h3>Linguagens</h3>
-                    <div class="skill-bars">
-                        <div class="skill-row"><span class="skill-name">PHP</span><div class="bar"><div class="bar-fill" style="width:95%"></div></div></div>
-                        <div class="skill-row"><span class="skill-name">Dart</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
-                        <div class="skill-row"><span class="skill-name">Python</span><div class="bar"><div class="bar-fill" style="width:70%"></div></div></div>
-                        <div class="skill-row"><span class="skill-name">JavaScript</span><div class="bar"><div class="bar-fill" style="width:70%"></div></div></div>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3>Frameworks</h3>
-                    <div class="tags">
-                        <span>Laravel</span><span>Filament</span><span>Flutter</span><span>FastAPI</span><span>Vue.js</span><span>Inertia.js</span><span>Node.js</span><span>Django</span>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3>Front-End</h3>
-                    <div class="tags">
-                        <span>TailwindCSS</span><span>Alpine.js</span><span>Vite</span>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3>Bancos de Dados</h3>
-                    <div class="tags">
-                        <span>PostgreSQL</span><span>MySQL</span><span>MariaDB</span><span>SQLite</span><span>DBeaver</span>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3>Infraestrutura & DevOps</h3>
-                    <div class="tags">
-                        <span>Docker</span><span>Docker Compose</span><span>Redis</span><span>Nginx</span><span>Apache</span><span>Supervisor</span><span>GitLab CI/CD</span><span>Git</span><span>Linux</span><span>WSL</span>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3>APIs & Arquitetura</h3>
-                    <div class="tags">
-                        <span>RESTful APIs</span><span>Swagger/OpenAPI</span><span>JWT Auth</span><span>Multi-Tenant</span><span>WebSockets</span><span>Laravel Reverb</span><span>Postman</span>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3>Segurança</h3>
-                    <div class="tags tags-security">
-                        <span>Pentest</span><span>Nmap</span><span>Wireshark</span><span>Burp Suite</span><span>LGPD</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certificacoes">
-        <div class="container">
-            <div class="section-label fade-up">Certificações</div>
-            <div class="certs-list fade-up">
-                <div class="cert-row">
-                    <span class="cert-badge cisco">CISCO</span>
-                    <span class="cert-name">Networking Defense</span>
-                    <span class="cert-date">04/2025</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge cisco">CISCO</span>
-                    <span class="cert-name">Networking Technician Career Path</span>
-                    <span class="cert-date">04/2025</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge cisco">CISCO</span>
-                    <span class="cert-name">Networking Academy Learn-A-Thon 2025</span>
-                    <span class="cert-date">03/2025</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge cisco">CISCO</span>
-                    <span class="cert-name">Networking Basics</span>
-                    <span class="cert-date">10/2024</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge cisco">CISCO</span>
-                    <span class="cert-name">Endpoint Security</span>
-                    <span class="cert-date">09/2024</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge dio">DIO</span>
-                    <span class="cert-name">Formação Cybersecurity Specialist</span>
-                    <span class="cert-date">01/2025</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge dio">DIO</span>
-                    <span class="cert-name">Enumeração e Exploração de Vulnerabilidades</span>
-                    <span class="cert-date">12/2024</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge dio">DIO</span>
-                    <span class="cert-name">Fundamentos de Testes de Invasão (Pentest)</span>
-                    <span class="cert-date">12/2024</span>
-                </div>
-                <div class="cert-row">
-                    <span class="cert-badge dio">DIO</span>
-                    <span class="cert-name">Python AI Backend Developer</span>
-                    <span class="cert-date">07/2024</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="formacao">
-        <div class="container">
-            <div class="section-label fade-up">Formação acadêmica</div>
-            <div class="formacao-grid fade-up">
-                <div class="formacao-card">
-                    <div class="formacao-icon">🎓</div>
-                    <div>
-                        <h3>Engenharia de Software</h3>
-                        <p class="company">Cruzeiro do Sul Virtual</p>
-                        <span class="date">Previsão: 06/2027</span>
-                    </div>
-                </div>
-                <div class="formacao-card">
-                    <div class="formacao-icon">⚖️</div>
-                    <div>
-                        <h3>Direito</h3>
-                        <p class="company">Universidade Federal da Paraíba</p>
-                        <p class="formacao-desc">Aplicação prática em conformidade com LGPD e segurança jurídica de dados.</p>
-                        <span class="date">Concluído: 06/2018</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="container">
-            <div class="section-label fade-up">Vamos conversar</div>
-            <div class="contato-content fade-up">
-                <p class="contato-intro">Estou disponível para oportunidades em desenvolvimento back-end, mobile ou cibersegurança.</p>
-                <div class="contato-grid">
-                    <a href="mailto:kayocezarma@gmail.com" class="contato-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span class="contato-label">Email</span>
-                        <span class="contato-value">kayocezarma@gmail.com</span>
+    <main id="main">
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content fade-up">
+                <div class="hero-badge" data-i18n="hero.badge">Available for new opportunities</div>
+                <h1>Kayo Cézar</h1>
+                <p class="hero-title" data-i18n="hero.title">Back-End & Mobile Developer</p>
+                <p class="hero-stack">
+                    <span>PHP</span><span>Laravel</span><span>Flutter</span><span>Docker</span><span>CI/CD</span>
+                </p>
+                <p class="hero-location">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span data-i18n="hero.location">João Pessoa, PB, Brazil</span>
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:kayocezarma@gmail.com" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span data-i18n="hero.cta">Contact me</span>
                     </a>
-                    <a href="https://linkedin.com/in/kayocezarandrade" target="_blank" class="contato-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        <span class="contato-label">LinkedIn</span>
-                        <span class="contato-value">kayocezarandrade</span>
+                    <a href="cv-en.pdf" id="cv-download" class="btn btn-outline" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span data-i18n="hero.cv">Download CV</span>
                     </a>
-                    <a href="https://github.com/kayocmadev" target="_blank" class="contato-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                        <span class="contato-label">GitHub</span>
-                        <span class="contato-value">kayocmadev</span>
-                    </a>
-                    <a href="tel:+5583996167221" class="contato-card">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                        <span class="contato-label">Telefone</span>
-                        <span class="contato-value">(83) 9 9616-7221</span>
-                    </a>
+                    <a href="https://linkedin.com/in/kayocezarandrade" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+                    <a href="https://github.com/kayocmadev" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="hero-scroll">
+                <span data-i18n="hero.scroll">scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="about.label">About me</div>
+                <div class="about-grid fade-up">
+                    <div class="about-text">
+                        <p class="lead" data-i18n="about.lead">Started as an intern and in less than two years I was already leading projects from scratch to production deployment.</p>
+                        <p data-i18n="about.p1">Promoted from Programmer II to Programmer V in under 9 months, taking on technical leadership of complete systems for public and private sectors.</p>
+                        <p data-i18n="about.p2">My core experience is in back-end, mobile, and infrastructure. I've built multi-tenant systems serving 7+ clients simultaneously in production, SaaS platforms, and mobile apps with real-time communication.</p>
+                        <p data-i18n="about.p3">Law degree from UFPB, providing a unique perspective on LGPD compliance and data privacy projects. Currently transitioning into Cybersecurity, with 5 CISCO certifications and training in Penetration Testing.</p>
+                    </div>
+                    <div class="about-stats stagger">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label" data-i18n="stat.years">Years of experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">7+</span>
+                            <span class="stat-label" data-i18n="stat.clients">Clients in production</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label" data-i18n="stat.certs">CISCO Certifications</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">9</span>
+                            <span class="stat-label" data-i18n="stat.months">Months to promotion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="projects.label">Featured projects</div>
+                <div class="projects-grid stagger">
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <div class="project-status">
+                                <span class="status-dot"></span> <span data-i18n="proj.production">In production</span>
+                            </div>
+                            <div class="project-badge private">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                                <span data-i18n="proj.private">Private code</span>
+                            </div>
+                        </div>
+                        <h3 data-i18n="proj1.title">Electronic Voting System</h3>
+                        <p data-i18n="proj1.desc">Multi-tenant system for municipal councils with mobile app. Live voting with WebSocket, biometric authentication, speaker management with countdown, and agenda control. Serving 7+ councils simultaneously.</p>
+                        <div class="project-stack">
+                            <span>Laravel</span><span>Flutter</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>WebSocket</span><span>JWT</span><span>GitLab CI/CD</span>
+                        </div>
+                    </div>
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <div class="project-status">
+                                <span class="status-dot"></span> <span data-i18n="proj.production">In production</span>
+                            </div>
+                            <div class="project-badge private">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                                <span data-i18n="proj.private">Private code</span>
+                            </div>
+                        </div>
+                        <h3 data-i18n="proj2.title">Public Healthcare Management</h3>
+                        <p data-i18n="proj2.desc">Complete platform with 14 CRUD modules, 15+ report types, and integration with government APIs (SEFAZ, Transparency Portal, Conecta Gov.br, IBGE). Management of professionals, contracts, invoices, and procurement.</p>
+                        <div class="project-stack">
+                            <span>Laravel</span><span>Filament</span><span>TailwindCSS</span><span>MySQL</span><span>Spatie Permission</span><span>Alpine.js</span>
+                        </div>
+                    </div>
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <div class="project-status status-dev">
+                                <span class="status-dot dot-yellow"></span> <span data-i18n="proj.development">In development</span>
+                            </div>
+                            <div class="project-badge private">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                                <span data-i18n="proj.private">Private code</span>
+                            </div>
+                        </div>
+                        <h3 data-i18n="proj3.title">Multi-Tenant SaaS POS Platform</h3>
+                        <p data-i18n="proj3.desc">Point-of-sale system with separate admin panels (landlord/tenant), inventory control, financial management, and multiple access profiles.</p>
+                        <div class="project-stack">
+                            <span>Laravel</span><span>Vue.js 3</span><span>Inertia.js</span><span>Filament</span><span>Stancl/Tenancy</span><span>Docker</span><span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="exp.label">Professional journey</div>
+                <div class="timeline">
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 data-i18n="exp1.title">Programmer V</h3>
+                                    <p class="company" data-i18n="exp1.company">PBSoft (Máxima Tecnologia) · On-site</p>
+                                </div>
+                                <span class="date" data-i18n="exp1.date">Feb – Jun 2026</span>
+                            </div>
+                            <p class="timeline-desc" data-i18n="exp1.desc">Technical leadership of multi-tenant electronic voting system for municipal councils. Full-stack architecture (back-end, mobile, infrastructure), automated deployment with CI/CD, and server security configuration.</p>
+                            <div class="timeline-promotion" data-i18n="exp1.badge">Promoted in under 9 months</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 data-i18n="exp2.title">Programmer II</h3>
+                                    <p class="company" data-i18n="exp2.company">PBSoft (Máxima Tecnologia) · On-site</p>
+                                </div>
+                                <span class="date" data-i18n="exp2.date">May 2025 – Jan 2026</span>
+                            </div>
+                            <p class="timeline-desc" data-i18n="exp2.desc">Development of customized systems for public and private sectors. RESTful APIs, standardized Docker environments, and LGPD compliance projects.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 data-i18n="exp3.title">Developer</h3>
+                                    <p class="company" data-i18n="exp3.company">Rede Facilité · Remote</p>
+                                </div>
+                                <span class="date" data-i18n="exp3.date">Jul 2024 – Aug 2025</span>
+                            </div>
+                            <p class="timeline-desc" data-i18n="exp3.desc">Web applications with PHP/Laravel, RESTful APIs, and Docker containerization.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 data-i18n="exp4.title">Web Development Intern</h3>
+                                    <p class="company" data-i18n="exp4.company">Rede Facilité</p>
+                                </div>
+                                <span class="date" data-i18n="exp4.date">Mar – Jun 2024</span>
+                            </div>
+                            <p class="timeline-desc" data-i18n="exp4.desc">Software project development support and server infrastructure maintenance.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot dot-active"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 data-i18n="exp5.title">Freelance Developer</h3>
+                                    <p class="company" data-i18n="exp5.company">Self-employed · Remote</p>
+                                </div>
+                                <span class="date" data-i18n="exp5.date">Jul 2023 – Present</span>
+                            </div>
+                            <p class="timeline-desc" data-i18n="exp5.desc">Public healthcare management systems and multi-tenant SaaS POS platform. Government API integration, RBAC, and production deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="skills.label">Technical skills</div>
+                <div class="skills-columns stagger fade-up">
+                    <div class="skill-group">
+                        <h3 data-i18n="skills.languages">Languages</h3>
+                        <div class="tags">
+                            <span>PHP</span><span>Python</span><span>JavaScript</span><span>Dart</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 data-i18n="skills.frameworks">Frameworks</h3>
+                        <div class="tags">
+                            <span>Laravel</span><span>Filament</span><span>Flutter</span><span>FastAPI</span><span>Vue.js</span><span>Inertia.js</span><span>Node.js</span><span>Django</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 data-i18n="skills.frontend">Front-End</h3>
+                        <div class="tags">
+                            <span>TailwindCSS</span><span>Alpine.js</span><span>Vite</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 data-i18n="skills.databases">Databases</h3>
+                        <div class="tags">
+                            <span>PostgreSQL</span><span>MySQL</span><span>MariaDB</span><span>SQLite</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 data-i18n="skills.devops">Infrastructure & DevOps</h3>
+                        <div class="tags">
+                            <span>Docker</span><span>Docker Compose</span><span>Redis</span><span>Nginx</span><span>Apache</span><span>Supervisor</span><span>GitLab CI/CD</span><span>Git</span><span>Linux</span><span>WSL</span><span>DBeaver</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 data-i18n="skills.apis">APIs & Architecture</h3>
+                        <div class="tags">
+                            <span>RESTful APIs</span><span>Swagger/OpenAPI</span><span>JWT Auth</span><span>Multi-Tenant</span><span>WebSockets</span><span>Laravel Reverb</span><span>Postman</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 data-i18n="skills.security">Security</h3>
+                        <div class="tags tags-security">
+                            <span>Pentest</span><span>Nmap</span><span>Wireshark</span><span>Burp Suite</span><span>LGPD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="certs.label">Certifications</div>
+                <div class="certs-list stagger fade-up">
+                    <div class="cert-row">
+                        <span class="cert-badge cisco">CISCO</span>
+                        <span class="cert-name">Networking Defense</span>
+                        <span class="cert-date">04/2025</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge cisco">CISCO</span>
+                        <span class="cert-name">Networking Technician Career Path</span>
+                        <span class="cert-date">04/2025</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge cisco">CISCO</span>
+                        <span class="cert-name">Networking Academy Learn-A-Thon 2025</span>
+                        <span class="cert-date">03/2025</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge cisco">CISCO</span>
+                        <span class="cert-name">Networking Basics</span>
+                        <span class="cert-date">10/2024</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge cisco">CISCO</span>
+                        <span class="cert-name">Endpoint Security</span>
+                        <span class="cert-date">09/2024</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge dio">DIO</span>
+                        <span class="cert-name" data-i18n="cert.cyber">Cybersecurity Specialist Training</span>
+                        <span class="cert-date">01/2025</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge dio">DIO</span>
+                        <span class="cert-name" data-i18n="cert.enum">Vulnerability Enumeration & Exploitation</span>
+                        <span class="cert-date">12/2024</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge dio">DIO</span>
+                        <span class="cert-name" data-i18n="cert.pentest">Penetration Testing Fundamentals</span>
+                        <span class="cert-date">12/2024</span>
+                    </div>
+                    <div class="cert-row">
+                        <span class="cert-badge dio">DIO</span>
+                        <span class="cert-name">Python AI Backend Developer</span>
+                        <span class="cert-date">07/2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="edu.label">Education</div>
+                <div class="education-grid stagger fade-up">
+                    <div class="education-card">
+                        <div class="edu-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+                        </div>
+                        <div>
+                            <h3 data-i18n="edu1.title">Software Engineering</h3>
+                            <p class="company" data-i18n="edu1.school">Cruzeiro do Sul Virtual</p>
+                            <span class="date" data-i18n="edu1.date">Expected: 06/2027</span>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="edu-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                        </div>
+                        <div>
+                            <h3 data-i18n="edu2.title">Law</h3>
+                            <p class="company" data-i18n="edu2.school">Federal University of Paraíba</p>
+                            <p class="edu-desc" data-i18n="edu2.desc">Applied to LGPD compliance and data privacy projects.</p>
+                            <span class="date" data-i18n="edu2.date">Graduated: 06/2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="lang.label">Languages</div>
+                <div class="languages-grid stagger fade-up">
+                    <div class="language-card">
+                        <span class="lang-flag">🇧🇷</span>
+                        <div>
+                            <h3 data-i18n="lang.pt">Portuguese</h3>
+                            <p class="lang-level" data-i18n="lang.pt.level">Native</p>
+                        </div>
+                    </div>
+                    <div class="language-card">
+                        <span class="lang-flag">🇺🇸</span>
+                        <div>
+                            <h3 data-i18n="lang.en">English</h3>
+                            <p class="lang-level" data-i18n="lang.en.level">Upper-Intermediate (B2)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="section-label fade-up" data-i18n="contact.label">Let's talk</div>
+                <div class="contact-content fade-up">
+                    <p class="contact-intro" data-i18n="contact.intro">Available for opportunities in back-end development, mobile, or cybersecurity.</p>
+                    <div class="contact-grid stagger">
+                        <a href="mailto:kayocezarma@gmail.com" class="contact-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span class="contact-label" data-i18n="contact.email">Email</span>
+                            <span class="contact-value">kayocezarma@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/kayocezarandrade" target="_blank" rel="noopener" class="contact-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">kayocezarandrade</span>
+                        </a>
+                        <a href="https://github.com/kayocmadev" target="_blank" rel="noopener" class="contact-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">kayocmadev</span>
+                        </a>
+                        <a href="tel:+5583996167221" class="contact-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            <span class="contact-label" data-i18n="contact.phone">Phone</span>
+                            <span class="contact-value">(83) 9 9616-7221</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>Kayo Cézar &copy; 2026</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.nav">Quick links</h4>
+                    <ul>
+                        <li><a href="#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <ul>
+                        <li><a href="mailto:kayocezarma@gmail.com">kayocezarma@gmail.com</a></li>
+                        <li><a href="tel:+5583996167221">(83) 9 9616-7221</a></li>
+                        <li><span data-i18n="hero.location">João Pessoa, PB, Brazil</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-social">
+                    <div class="footer-social-links">
+                        <a href="https://linkedin.com/in/kayocezarandrade" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://github.com/kayocmadev" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                    <a href="cv-en.pdf" id="cv-download-footer" class="btn btn-outline btn-sm" target="_blank" rel="noopener">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span data-i18n="hero.cv">Download CV</span>
+                    </a>
+                    <p class="footer-copy">Kayo Cézar &copy; 2026. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <button id="scroll-top" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
     <script>
-        var toggle = document.querySelector('.nav-toggle');
-        var links = document.querySelector('.nav-links');
-        toggle.addEventListener('click', function() {
-            toggle.classList.toggle('active');
-            links.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                toggle.classList.remove('active');
-                links.classList.remove('active');
-            });
-        });
+    var T = {
+        en: {
+            'skip': 'Skip to main content',
+            'nav.about': 'About',
+            'nav.projects': 'Projects',
+            'nav.experience': 'Experience',
+            'nav.skills': 'Skills',
+            'nav.contact': 'Contact',
+            'hero.badge': 'Available for new opportunities',
+            'hero.title': 'Back-End & Mobile Developer',
+            'hero.location': 'João Pessoa, PB, Brazil',
+            'hero.cta': 'Contact me',
+            'hero.cv': 'Download CV',
+            'hero.scroll': 'scroll',
+            'about.label': 'About me',
+            'about.lead': 'Started as an intern and in less than two years I was already leading projects from scratch to production deployment.',
+            'about.p1': 'Promoted from Programmer II to Programmer V in under 9 months, taking on technical leadership of complete systems for public and private sectors.',
+            'about.p2': "My core experience is in back-end, mobile, and infrastructure. I've built multi-tenant systems serving 7+ clients simultaneously in production, SaaS platforms, and mobile apps with real-time communication.",
+            'about.p3': 'Law degree from UFPB, providing a unique perspective on LGPD compliance and data privacy projects. Currently transitioning into Cybersecurity, with 5 CISCO certifications and training in Penetration Testing.',
+            'stat.years': 'Years of experience',
+            'stat.clients': 'Clients in production',
+            'stat.certs': 'CISCO Certifications',
+            'stat.months': 'Months to promotion',
+            'projects.label': 'Featured projects',
+            'proj.production': 'In production',
+            'proj.development': 'In development',
+            'proj.private': 'Private code',
+            'proj1.title': 'Electronic Voting System',
+            'proj1.desc': 'Multi-tenant system for municipal councils with mobile app. Live voting with WebSocket, biometric authentication, speaker management with countdown, and agenda control. Serving 7+ councils simultaneously.',
+            'proj2.title': 'Public Healthcare Management',
+            'proj2.desc': 'Complete platform with 14 CRUD modules, 15+ report types, and integration with government APIs (SEFAZ, Transparency Portal, Conecta Gov.br, IBGE). Management of professionals, contracts, invoices, and procurement.',
+            'proj3.title': 'Multi-Tenant SaaS POS Platform',
+            'proj3.desc': 'Point-of-sale system with separate admin panels (landlord/tenant), inventory control, financial management, and multiple access profiles.',
+            'exp.label': 'Professional journey',
+            'exp1.title': 'Programmer V',
+            'exp1.company': 'PBSoft (Máxima Tecnologia) · On-site',
+            'exp1.date': 'Feb – Jun 2026',
+            'exp1.desc': 'Technical leadership of multi-tenant electronic voting system for municipal councils. Full-stack architecture (back-end, mobile, infrastructure), automated deployment with CI/CD, and server security configuration.',
+            'exp1.badge': 'Promoted in under 9 months',
+            'exp2.title': 'Programmer II',
+            'exp2.company': 'PBSoft (Máxima Tecnologia) · On-site',
+            'exp2.date': 'May 2025 – Jan 2026',
+            'exp2.desc': 'Development of customized systems for public and private sectors. RESTful APIs, standardized Docker environments, and LGPD compliance projects.',
+            'exp3.title': 'Developer',
+            'exp3.company': 'Rede Facilité · Remote',
+            'exp3.date': 'Jul 2024 – Aug 2025',
+            'exp3.desc': 'Web applications with PHP/Laravel, RESTful APIs, and Docker containerization.',
+            'exp4.title': 'Web Development Intern',
+            'exp4.company': 'Rede Facilité',
+            'exp4.date': 'Mar – Jun 2024',
+            'exp4.desc': 'Software project development support and server infrastructure maintenance.',
+            'exp5.title': 'Freelance Developer',
+            'exp5.company': 'Self-employed · Remote',
+            'exp5.date': 'Jul 2023 – Present',
+            'exp5.desc': 'Public healthcare management systems and multi-tenant SaaS POS platform. Government API integration, RBAC, and production deployment.',
+            'skills.label': 'Technical skills',
+            'skills.languages': 'Languages',
+            'skills.frameworks': 'Frameworks',
+            'skills.frontend': 'Front-End',
+            'skills.databases': 'Databases',
+            'skills.devops': 'Infrastructure & DevOps',
+            'skills.apis': 'APIs & Architecture',
+            'skills.security': 'Security',
+            'certs.label': 'Certifications',
+            'cert.cyber': 'Cybersecurity Specialist Training',
+            'cert.enum': 'Vulnerability Enumeration & Exploitation',
+            'cert.pentest': 'Penetration Testing Fundamentals',
+            'edu.label': 'Education',
+            'edu1.title': 'Software Engineering',
+            'edu1.school': 'Cruzeiro do Sul Virtual',
+            'edu1.date': 'Expected: 06/2027',
+            'edu2.title': 'Law',
+            'edu2.school': 'Federal University of Paraíba',
+            'edu2.desc': 'Applied to LGPD compliance and data privacy projects.',
+            'edu2.date': 'Graduated: 06/2018',
+            'lang.label': 'Languages',
+            'lang.pt': 'Portuguese',
+            'lang.pt.level': 'Native',
+            'lang.en': 'English',
+            'lang.en.level': 'Upper-Intermediate (B2)',
+            'contact.label': "Let's talk",
+            'contact.intro': 'Available for opportunities in back-end development, mobile, or cybersecurity.',
+            'contact.email': 'Email',
+            'contact.phone': 'Phone',
+            'footer.nav': 'Quick links',
+            'footer.contact': 'Contact',
+            'footer.rights': 'All rights reserved.'
+        },
+        pt: {
+            'skip': 'Pular para o conteúdo principal',
+            'nav.about': 'Sobre',
+            'nav.projects': 'Projetos',
+            'nav.experience': 'Experiência',
+            'nav.skills': 'Skills',
+            'nav.contact': 'Contato',
+            'hero.badge': 'Disponível para novas oportunidades',
+            'hero.title': 'Desenvolvedor Back-End & Mobile',
+            'hero.location': 'João Pessoa, PB',
+            'hero.cta': 'Contato',
+            'hero.cv': 'Baixar Currículo',
+            'hero.scroll': 'scroll',
+            'about.label': 'Sobre mim',
+            'about.lead': 'Comecei como estagiário e em menos de dois anos já estava liderando projetos do zero ao deploy em produção.',
+            'about.p1': 'Fui promovido de Programador II a Programador V em menos de 9 meses, assumindo a responsabilidade técnica de sistemas completos para os setores público e privado.',
+            'about.p2': 'Minha experiência principal está em back-end, mobile e infraestrutura. Já desenvolvi sistemas multi-tenant atendendo 7+ clientes em produção simultânea, plataformas SaaS e aplicativos mobile com comunicação em tempo real.',
+            'about.p3': 'Tenho formação em Direito pela UFPB, o que me dá uma visão diferenciada em projetos que envolvem LGPD e segurança jurídica de dados. Atualmente em transição para Cibersegurança, com 5 certificações CISCO e formação em Pentest.',
+            'stat.years': 'Anos de experiência',
+            'stat.clients': 'Clientes em produção',
+            'stat.certs': 'Certificações CISCO',
+            'stat.months': 'Meses até promoção',
+            'projects.label': 'Projetos em destaque',
+            'proj.production': 'Em produção',
+            'proj.development': 'Em desenvolvimento',
+            'proj.private': 'Código privado',
+            'proj1.title': 'Sistema de Votação Eletrônica',
+            'proj1.desc': 'Sistema multi-tenant para câmaras municipais com app mobile. Votações ao vivo com WebSocket, autenticação biométrica, controle de oradores com countdown e gestão de pauta. Atendendo 7+ câmaras simultaneamente.',
+            'proj2.title': 'Sistema de Gestão de Saúde Pública',
+            'proj2.desc': 'Plataforma completa com 14 módulos CRUD, 15+ relatórios e integração com APIs governamentais (SEFAZ, Portal da Transparência, Conecta Gov.br, IBGE). Gestão de profissionais, contratos, notas fiscais e licitações.',
+            'proj3.title': 'Plataforma SaaS Multi-Tenant para PDV',
+            'proj3.desc': 'Sistema de ponto de venda com painéis administrativos separados (landlord/tenant), controle de estoque, gestão financeira e múltiplos perfis de acesso.',
+            'exp.label': 'Trajetória profissional',
+            'exp1.title': 'Programador V',
+            'exp1.company': 'PBSoft (Máxima Tecnologia) · Presencial',
+            'exp1.date': 'fev – jun 2026',
+            'exp1.desc': 'Liderança técnica de sistema de votação eletrônica multi-tenant para câmaras municipais. Arquitetura completa (back-end, mobile, infra), deploy automatizado com CI/CD e configuração de segurança de servidor.',
+            'exp1.badge': 'Promovido em menos de 9 meses',
+            'exp2.title': 'Programador II',
+            'exp2.company': 'PBSoft (Máxima Tecnologia) · Presencial',
+            'exp2.date': 'mai 2025 – jan 2026',
+            'exp2.desc': 'Desenvolvimento de sistemas customizados para setores público e privado. APIs RESTful, ambientes Docker padronizados e projetos de compliance com LGPD.',
+            'exp3.title': 'Desenvolvedor',
+            'exp3.company': 'Rede Facilité · Remoto',
+            'exp3.date': 'jul 2024 – ago 2025',
+            'exp3.desc': 'Aplicações web com PHP/Laravel, APIs RESTful e containerização com Docker.',
+            'exp4.title': 'Estágio em Desenvolvimento Web',
+            'exp4.company': 'Rede Facilité',
+            'exp4.date': 'mar – jun 2024',
+            'exp4.desc': 'Suporte ao desenvolvimento de projetos de software e manutenção de infraestrutura de servidores.',
+            'exp5.title': 'Desenvolvedor Freelance',
+            'exp5.company': 'Autônomo · Remoto',
+            'exp5.date': 'jul 2023 – atual',
+            'exp5.desc': 'Sistemas de gestão de saúde pública e plataforma SaaS multi-tenant para PDV. Integração com APIs governamentais, RBAC e deploy em produção.',
+            'skills.label': 'Habilidades técnicas',
+            'skills.languages': 'Linguagens',
+            'skills.frameworks': 'Frameworks',
+            'skills.frontend': 'Front-End',
+            'skills.databases': 'Bancos de Dados',
+            'skills.devops': 'Infraestrutura & DevOps',
+            'skills.apis': 'APIs & Arquitetura',
+            'skills.security': 'Segurança',
+            'certs.label': 'Certificações',
+            'cert.cyber': 'Formação Cybersecurity Specialist',
+            'cert.enum': 'Enumeração e Exploração de Vulnerabilidades',
+            'cert.pentest': 'Fundamentos de Testes de Invasão (Pentest)',
+            'edu.label': 'Formação acadêmica',
+            'edu1.title': 'Engenharia de Software',
+            'edu1.school': 'Cruzeiro do Sul Virtual',
+            'edu1.date': 'Previsão: 06/2027',
+            'edu2.title': 'Direito',
+            'edu2.school': 'Universidade Federal da Paraíba',
+            'edu2.desc': 'Aplicação prática em conformidade com LGPD e segurança jurídica de dados.',
+            'edu2.date': 'Concluído: 06/2018',
+            'lang.label': 'Idiomas',
+            'lang.pt': 'Português',
+            'lang.pt.level': 'Nativo',
+            'lang.en': 'Inglês',
+            'lang.en.level': 'Intermediário-Avançado (B2)',
+            'contact.label': 'Vamos conversar',
+            'contact.intro': 'Estou disponível para oportunidades em desenvolvimento back-end, mobile ou cibersegurança.',
+            'contact.email': 'Email',
+            'contact.phone': 'Telefone',
+            'footer.nav': 'Links rápidos',
+            'footer.contact': 'Contato',
+            'footer.rights': 'Todos os direitos reservados.'
+        }
+    };
 
-        window.addEventListener('scroll', function() {
-            var navbar = document.getElementById('navbar');
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
+    var currentLang = localStorage.getItem('lang') || 'en';
 
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+    function setLang(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        document.getElementById('lang-toggle').querySelector('.lang-label').textContent = lang === 'en' ? 'PT' : 'EN';
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            if (T[lang][key]) el.textContent = T[lang][key];
+        });
+        var cvFile = lang === 'en' ? 'cv-en.pdf' : 'cv-pt.pdf';
+        document.getElementById('cv-download').href = cvFile;
+        document.getElementById('cv-download-footer').href = cvFile;
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+        setLang(currentLang === 'en' ? 'pt' : 'en');
+    });
+
+    function getPreferredTheme() {
+        var stored = localStorage.getItem('theme');
+        if (stored) return stored;
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+
+    setTheme(getPreferredTheme());
+
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function() {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        toggle.classList.toggle('active');
+        links.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.classList.remove('active');
+            links.classList.remove('active');
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 600);
+    });
+
+    document.getElementById('scroll-top').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                if (entry.target.classList.contains('stagger')) {
+                    var children = entry.target.children;
+                    for (var i = 0; i < children.length; i++) {
+                        (function(idx) {
+                            children[idx].style.transitionDelay = (idx * 80) + 'ms';
+                            children[idx].classList.add('stagger-visible');
+                        })(i);
+                    }
                 }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-        document.querySelectorAll('.fade-up').forEach(function(el) {
-            observer.observe(el);
+            }
         });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up, .stagger').forEach(function(el) {
+        observer.observe(el);
+    });
+
+    setLang(currentLang);
     </script>
 </body>
 </html>
