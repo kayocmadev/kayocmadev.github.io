@@ -572,6 +572,17 @@ section + section {
     border-radius: 6px;
 }
 
+.project-badge.public {
+    color: var(--primary);
+    border-color: var(--primary);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.project-badge.public:hover {
+    background: var(--primary-glow);
+}
+
 .project-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
